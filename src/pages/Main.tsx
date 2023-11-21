@@ -2,12 +2,10 @@ import Slider from '../components/Slider';
 import '../assets/scss/pages/_mainPage.scss'
 import CircleBtn from '../components/buttons/CircleBtn';
 import CardListItem from '../components/frames/CardListItem';
-import datas from '../datas.json';
-import SliderItem from '../components/frames/SliderItem';
 import API from '../utils/API';
 import { useEffect, useState } from 'react';
-import {getToday, dateParseNumber} from '../utils/Date';
-import { Navigate, useNavigate } from 'react-router';
+import {getToday} from '../utils/Date';
+import { useNavigate } from 'react-router';
 import LoadingBox from '../components/LoadingBox';
 import InfoTextBox from '../components/InfoTextBox';
 
