@@ -1,0 +1,76 @@
+.paging_wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 rem(250px);
+
+  .btn_prev,.btn_next{
+    width: rem(30px);
+    height: rem(30px);
+    background: url('../../img/ico_arrow_right.png') no-repeat center / 80% transparent;
+
+    &:disabled{
+      opacity: 0.2;
+    }
+  }
+
+  .btn_prev{
+    transform: scaleX(-1);
+  }
+  .number_wrap{
+    button{
+      margin: 0 rem(5px);
+      padding: 0 rem(5px);
+      height: rem(30px);
+      background-color: transparent;
+      font-size: rem(16px);
+      color: #000;
+      &.active{
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.btn_square{
+  padding: 0 rem(10px);
+  height: rem(30px);
+  border: 1px solid #000;
+  font-size: rem(14px);
+  background: #fff;
+  transition: all .3s;
+  color: #000;
+
+  &:hover{
+    background-color: #000;
+    color: #fff;
+  }
+}
+a.btn_square{
+  display: inline-block;
+  line-height: rem(30px);
+}
+
+@include mobile{
+  .paging_wrap{
+    margin: 0 0 rem(200px);
+
+    .btn_prev,.btn_next{
+      width: rem(25px);
+      height: rem(25px);
+    }
+
+    .number_wrap{
+      button{
+        margin: 0 rem(3px);
+        padding: 0 rem(3px);
+        height: rem(30px);
+        background-color: transparent;
+        font-size: rem(13px);
+        &.active{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
