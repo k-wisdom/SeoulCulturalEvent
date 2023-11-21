@@ -1,0 +1,115 @@
+@use '../abstracts' as *;
+
+.bx_event_top{
+  padding: rem(40px) 0;
+  border-bottom: 1px solid #000;
+
+  i{
+    font-style: normal;
+    font-size: rem(14px);
+    color: #333;
+  }
+  h2{
+    padding: rem(10px) 0;
+    line-height: 1.4;
+    font-size: 1.8rem;
+  }
+}
+
+.event_detail_wrap{
+  margin:rem(50px) auto rem(200px);
+
+  .bx_event_detail{
+    display: flex;
+    column-gap: rem(50px);
+
+    & > div{ flex-grow: 1;}
+  }
+  img{
+    display: block;
+    margin: rem(30px) 0;
+    max-width: 40%;
+    height: auto;
+    object-fit: contain;
+  }
+  .event_desc{
+    margin-bottom: rem(10px);
+    font-size: rem(16px);
+    line-height: 1.7;
+  }
+
+  .bx_etc_content{
+    margin: rem(10px) 0;
+  }
+
+  ul{
+    margin: rem(50px) 0;
+    padding-bottom: rem(20px);
+    border-bottom: 1px solid #000;
+    li{
+      margin-bottom: rem(18px);
+      b{display: block;}
+      .btn_square{
+        margin-top: rem(5px);
+      }
+    }
+  }
+
+  .btn_go_list{
+    display: block;
+    margin: rem(50px) auto;
+  }
+}
+
+@include mobile{
+  .bx_event_top{
+    padding: rem(20px) 0;
+    border-bottom: 1px solid #000;
+
+    i{
+      font-size: rem(12px);
+    }
+    h2{
+      padding: rem(10px) 0;
+      line-height: 1.4;
+      font-size: 1rem;
+      word-break: keep-all;
+    }
+  }
+
+  .event_detail_wrap{
+    margin:rem(0px) auto rem(200px);
+    .bx_event_detail{
+      flex-direction: column;
+    }
+    img{
+      margin: rem(30px) auto;
+      width: 80%;
+      max-width: 17.75rem;
+    }
+    .event_desc{
+      margin-bottom: rem(10px);
+      font-size: rem(14px);
+      line-height: 1.7;
+    }
+
+    .bx_etc_content{
+      margin: rem(10px) 0;
+      font-size: rem(14px);
+    }
+
+    ul{
+      margin: 0;
+      padding-bottom: rem(10px);
+      li{
+        margin-bottom: rem(18px);
+        font-size: rem(14px);
+        b{display: block;}
+      }
+    }
+    .btn_go_list{
+      display: block;
+      margin: rem(50px) auto;
+    }
+  }
+}
