@@ -19,10 +19,17 @@ export default function Main(){
     const {data} = await API.get(`/1/8/%20/%20/${today}`)
     JSON.stringify(data);
 
-    //추후 데이터가 존재하지않을 때 처리 추가해야함
-    let eventData = data.culturalEventInfo.row;
-    setIsLoading(false)
-    setData(eventData);
+    const resultCode = data.RESULT?.CODE || data.culturalEventInfo?.RESULT.CODE;
+
+    if(resultCode === 'INFO-000' || resultCode === 'INFO-200'){
+      let eventData = data.culturalEventInfo.row;
+      setIsLoading(false)
+      setData(eventData);
+    }else if(resultCode === 'ERROR-500'){
+      alert('서버로부터 문제가 발생했습니다. 잠시후 다시 시도해주세요.');
+      return;
+    }
+
   }
 
   useEffect(() => {

@@ -78,13 +78,21 @@ export default function SearchList(){
     const category = ctg.split('/')[0]; //category + date 검색시 API 검색오류로 인해서 적용
     const {data} = await API.get(`/${startIndex}/${endIndex}/${category}/${text}/${selectDate}`)
     JSON.stringify(data);
-    let eventData = data.culturalEventInfo?.row;
-    let totalCount = data.culturalEventInfo?.list_total_count;
 
-    if(eventData || data.RESULT.CODE === 'INFO-200') setIsLoading(false);
-    //data.RESULT.CODE === 'INFO-200' => 해당데이터가 없을 때
-    setData(eventData);
-    setDataCnt(totalCount ? totalCount : 0);
+    const resultCode = data.RESULT?.CODE || data.culturalEventInfo?.RESULT.CODE;
+
+    if(resultCode === 'INFO-000' || resultCode === 'INFO-200'){
+      // 'INFO-200' => 해당데이터가 없을 때
+      let eventData = data.culturalEventInfo?.row;
+      let totalCount = data.culturalEventInfo?.list_total_count;
+
+      setIsLoading(false);
+      setData(eventData);
+      setDataCnt(totalCount ? totalCount : 0);
+    }else if(resultCode === 'ERROR-500'){
+      alert('서버로부터 문제가 발생했습니다. 잠시후 다시 시도해주세요.');
+      return;
+    }
   }
 
   const resetFn  = () => {

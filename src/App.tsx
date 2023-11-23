@@ -13,9 +13,9 @@ import ScrollToTop from './components/ScrollToTop';
 import { GoTopBtn } from './components/buttons/GoTopBtn';
 
 function App() {
-  const [eventList] = useData();
+  const [eventList, state] = useData();
   return (
-    <dataContext.Provider value={eventList}>
+    <dataContext.Provider value={{eventList,state}}>
     <div className="App">
       <ScrollToTop />
       <Header/>

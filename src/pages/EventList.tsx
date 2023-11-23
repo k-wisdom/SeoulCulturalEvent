@@ -40,7 +40,8 @@ export default function CurrentEventList(){
   const pageName:any = PAGENAME[pageId!];
 
   const contextData:any = useContext(dataContext);
-  const datas = contextData[pageId!];
+  const datas = contextData.eventList[pageId!];
+  const dataState = contextData.state;
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState<any[]>([]);
@@ -104,20 +105,22 @@ export default function CurrentEventList(){
     PageInit()
   }
 
-  useEffect(() => {
-    getData()
-     //eslint-disable-next-line react-hooks/exhaustive-deps
-  },[ctg, pageNum, datas])
-
   useEffect(() => { 
+
+    if(dataState === 'ERROR-500'){
+      alert('서버로부터 문제가 발생했습니다. 잠시후 다시 시도해주세요.');
+      return;
+    }
+
     //pageId 변경시 검색조건 reset
     if(searchParams.get('page') === null){
       setCtg(null);
       resetFn();
     }
+
     getData();
      //eslint-disable-next-line react-hooks/exhaustive-deps
-  },[pageId])
+  },[pageId, ctg, pageNum, datas])
 
   const enterkeyFn = (e:KeyboardEvent) => {
     if(e.key === "Enter"){

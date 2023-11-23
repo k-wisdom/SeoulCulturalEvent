@@ -57,7 +57,6 @@ export function usePagination(dataCnt:number, LISTCOUNT:number = 10, LIMIT=10, s
   const PageInit = () => {
     pageRef.current = 1;
     setPageNum(0);
-    console.log('pageInit 실행')
   }
 
   const Pagination = 
