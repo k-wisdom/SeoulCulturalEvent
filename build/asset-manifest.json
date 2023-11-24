@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/SeoulCulturalEvent/static/css/main.d14d3332.css",
+    "main.js": "/SeoulCulturalEvent/static/js/main.1803761e.js",
+    "static/js/787.367e8ba9.chunk.js": "/SeoulCulturalEvent/static/js/787.367e8ba9.chunk.js",
+    "static/media/loading-gif.gif": "/SeoulCulturalEvent/static/media/loading-gif.803f24369a085e35482e.gif",
+    "static/media/error-404.png": "/SeoulCulturalEvent/static/media/error-404.36ce7ca51f0712c46ebe.png",
+    "static/media/ico_srch.png": "/SeoulCulturalEvent/static/media/ico_srch.1d92f967297920015306.png",
+    "index.html": "/SeoulCulturalEvent/index.html",
+    "main.d14d3332.css.map": "/SeoulCulturalEvent/static/css/main.d14d3332.css.map",
+    "main.1803761e.js.map": "/SeoulCulturalEvent/static/js/main.1803761e.js.map",
+    "787.367e8ba9.chunk.js.map": "/SeoulCulturalEvent/static/js/787.367e8ba9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d14d3332.css",
+    "static/js/main.1803761e.js"
+  ]
+}
