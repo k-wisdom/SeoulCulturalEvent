@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SeoulCulturalEvent/static/css/main.d14d3332.css",
-    "main.js": "/SeoulCulturalEvent/static/js/main.bb2df1ce.js",
+    "main.js": "/SeoulCulturalEvent/static/js/main.2cb75f77.js",
     "static/js/787.367e8ba9.chunk.js": "/SeoulCulturalEvent/static/js/787.367e8ba9.chunk.js",
     "static/media/img_banner2.png": "/SeoulCulturalEvent/static/media/img_banner2.b8588a8d4e87f9335bbe.png",
     "static/media/img_banner1.png": "/SeoulCulturalEvent/static/media/img_banner1.b6c48d5415c036fdef74.png",
@@ -11,11 +11,11 @@
     "static/media/ico_srch.png": "/SeoulCulturalEvent/static/media/ico_srch.1d92f967297920015306.png",
     "index.html": "/SeoulCulturalEvent/index.html",
     "main.d14d3332.css.map": "/SeoulCulturalEvent/static/css/main.d14d3332.css.map",
-    "main.bb2df1ce.js.map": "/SeoulCulturalEvent/static/js/main.bb2df1ce.js.map",
+    "main.2cb75f77.js.map": "/SeoulCulturalEvent/static/js/main.2cb75f77.js.map",
     "787.367e8ba9.chunk.js.map": "/SeoulCulturalEvent/static/js/787.367e8ba9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d14d3332.css",
-    "static/js/main.bb2df1ce.js"
+    "static/js/main.2cb75f77.js"
   ]
 }
