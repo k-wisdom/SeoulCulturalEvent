@@ -176,7 +176,7 @@ export default function CurrentEventList(){
         <div className="event_list_top">
           <h2 className="title_h2">{pageName}</h2>
           <div className="bx_search_form">
-            <SearchBox value={searchParams.get('text') || ''} key={pageId} ref={inputRef} onClick={searchBtnClickFn} onKeypress={enterkeyFn}/>
+            <SearchBox value={searchParams.get('text') || ''} key={pageId} ref={inputRef} onClick={searchBtnClickFn} onKeypress={enterkeyFn}  placeholder={'공연/행사명을 입력해주세요.'} />
           </div>
           <TabBtnBox key={pageId} names={CATEGORY} handleClick={ctgClickFn} activeIndex={ activeTabIndex !== -1 ? activeTabIndex : 0} />
         </div>

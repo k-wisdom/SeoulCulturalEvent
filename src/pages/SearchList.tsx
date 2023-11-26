@@ -78,7 +78,7 @@ export default function SearchList(){
     const category = ctg.split('/')[0]; //category + date 검색시 API 검색오류로 인해서 적용
     const {data} = await API.get(`/${startIndex}/${endIndex}/${category}/${text}/${selectDate}`)
     JSON.stringify(data);
-
+    
     const resultCode = data.RESULT?.CODE || data.culturalEventInfo?.RESULT.CODE;
 
     if(resultCode === 'INFO-000' || resultCode === 'INFO-200'){
@@ -109,6 +109,7 @@ export default function SearchList(){
       params.set('page', pageNum);
       return params;
     })
+     //eslint-disable-next-line react-hooks/exhaustive-deps
   },[pageNum])
 
   const enterkeyFn = (e:KeyboardEvent) => {
@@ -150,7 +151,7 @@ export default function SearchList(){
 
     //한번 실행 후 초기화
     localStorage.removeItem('scrollY');
-
+     //eslint-disable-next-line react-hooks/exhaustive-deps
   },[getData])
 
 

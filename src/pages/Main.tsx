@@ -46,7 +46,7 @@ export default function Main(){
 
     //한번 실행 후 초기화
     localStorage.removeItem('scrollY');
-
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   },[getEvent])
 
   const listClick = (data:any) => {
@@ -62,13 +62,13 @@ export default function Main(){
         <p className="slide_fixed_text">서울시의 다양한 문화 행사에<br/> 참여해보세요!</p>
       <Slider>
         <div>
-          <img src="/assets/img/img_banner3.jpeg" alt="불꽃놀이"/>
+          <img src={require("../assets/img/img_banner3.jpeg")} alt="불꽃놀이"/>
         </div>
         <div>
-          <img src="/assets/img/img_banner1.png" alt="국악/판소리"/>
+          <img src={require("../assets/img/img_banner1.png")} alt="국악/판소리"/>
         </div>
         <div>
-          <img src="/assets/img/img_banner2.png" alt="오케스트라"/>
+          <img src={require("../assets/img/img_banner2.png")} alt="오케스트라"/>
         </div>
       </Slider>
       </section>
