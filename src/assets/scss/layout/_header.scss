@@ -1,7 +1,7 @@
-@use '../abstracts'  as *;
+@use '../abstracts' as *;
 
-$headerHeight : rem(65px);
-header{
+$headerHeight: rem(65px);
+header {
   position: fixed;
   left: 0;
   right: 0;
@@ -12,174 +12,183 @@ header{
   box-sizing: border-box;
   border-bottom: 1px solid #000;
   // background: #fff;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
 
-  > div{
+  > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
   }
-  .header_logo{
-    img{
+  .header_logo {
+    img {
       width: rem(50px);
       height: auto;
     }
-    span{
+    span {
       font-size: rem(12px);
       font-family: $Nanum;
     }
   }
 
-  button{ 
-    box-sizing: border-box; -webkit-tap-highlight-color: transparent;
+  button {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
     outline: none;
   }
-  .btn_search{
+  .btn_search {
     width: rem(60px);
     height: $headerHeight;
     background: url(../../img/ico_srch.png) no-repeat center / rem(20px);
     border-left: 1px solid #000;
-    transition: background-image .3s;
-  
+    transition: background-image 0.3s;
 
-    &.active{
+    &.active {
       background-image: url(../../img/ico_close2.png);
-      background-size:rem(16px);
+      background-size: rem(16px);
     }
   }
-  .btn_menu{
+  .btn_menu {
     width: rem(60px);
     height: $headerHeight;
     border-left: 1px solid #000;
     background: transparent;
 
-    $gap : rem(5px);
+    $gap: rem(5px);
 
-    &.active{
-      i{
-        &:nth-of-type(1){transform:translateY(1.5px) rotate(-45deg);}
-        &:nth-of-type(2){width: 0;}
-        &:nth-of-type(3){transform: translateY(-1.5px) rotate(45deg);}
+    &.active {
+      i {
+        &:nth-of-type(1) {
+          transform: translateY(1.5px) rotate(-45deg);
+        }
+        &:nth-of-type(2) {
+          width: 0;
+        }
+        &:nth-of-type(3) {
+          transform: translateY(-1.5px) rotate(45deg);
+        }
       }
     }
 
-    i{
+    i {
       margin: auto;
       display: block;
       width: rem(20px);
       height: 1.5px;
       background-color: #000;
       border-radius: 2px;
-      transition: all .6s;
+      transition: all 0.6s;
 
-      &:nth-of-type(1){transform:translateY(-$gap)}
-      &:nth-of-type(3){transform: translateY($gap);}
+      &:nth-of-type(1) {
+        transform: translateY(-$gap);
+      }
+      &:nth-of-type(3) {
+        transform: translateY($gap);
+      }
     }
-
   }
 }
 
-.nav_wrap{
+.nav_wrap {
   display: inline-block;
   position: relative;
 }
-.nav{
-  li{
+.nav {
+  li {
     color: #3f3f3f;
-    &:hover{
+    &:hover {
       color: #000;
       font-weight: bold;
     }
   }
 
-  .depth_1{
-    >li{
+  .depth_1 {
+    > li {
       // padding-bottom: rem(10px);
       font-size: rem(15px);
       font-weight: 500;
-      
-      &:not(:first-of-type){
+
+      &:not(:first-of-type) {
         padding-top: rem(20px);
       }
     }
   }
-  .depth_2{
+  .depth_2 {
     padding: rem(10px);
     margin-top: rem(5px);
     border-top: 1px solid #000;
-    li{
+    li {
       padding: rem(8px) rem(20px);
       font-size: rem(14.5px);
     }
   }
 }
 
-.gray_box{
+.gray_box {
   position: absolute;
-  top:calc(100% - 0.5px);
+  top: calc(100% - 0.5px);
   right: 0;
 }
 
-@include mobile{
-  $headerHeight : rem(50px);
-  header{
+@include mobile {
+  $headerHeight: rem(50px);
+  header {
     height: $headerHeight;
 
-    .bx_con_1600{
+    .bx_con_1600 {
       margin: 0;
       width: 100%;
     }
 
-    .header_logo{
+    .header_logo {
       margin-left: rem(10px);
-      img{
+      img {
         width: rem(30px);
         height: auto;
       }
-      span{
+      span {
         font-size: rem(11px);
         vertical-align: middle;
       }
     }
 
-    .btn_search{
+    .btn_search {
       width: rem(45px);
       height: $headerHeight;
-      background-size : rem(18);
+      background-size: rem(18);
     }
 
-    .btn_menu{
+    .btn_menu {
       width: rem(45px);
       height: $headerHeight;
-      $gap : rem(4px);
-      i{
+      $gap: rem(4px);
+      i {
         width: rem(18px);
       }
     }
   }
 
-  .nav_wrap{
+  .nav_wrap {
     position: static;
   }
 
-  .nav{
-    .depth_1{
-      >li{
+  .nav {
+    .depth_1 {
+      > li {
         font-size: rem(14.5px);
       }
     }
-    .depth_2{
+    .depth_2 {
       padding: rem(10px);
       margin-top: rem(5px);
-      li{
+      li {
         padding: rem(8px) rem(10px);
         font-size: rem(14px);
       }
     }
   }
 
-  .gray_box{
+  .gray_box {
     left: 0;
     right: 0;
     width: 100% !important;

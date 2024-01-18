@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
-.section_slider{
+.section_slider {
   position: relative;
-  .slide_fixed_text{
+  .slide_fixed_text {
     @include absolute();
     z-index: 9;
     text-align: center;
@@ -14,36 +14,36 @@
   }
 }
 
-.section_current_events{
+.section_current_events {
   padding: rem(80px) 0;
-  >div{
+  > div {
     position: relative;
   }
-  .btn_view_more{
+  .btn_view_more {
     position: absolute;
     right: 0;
     top: 0;
   }
 
-  .title_h2{
+  .title_h2 {
     padding-bottom: rem(80px);
   }
 }
 
-@include mobile{
-  .section_slider{
-    .slide_fixed_text{
+@include mobile {
+  .section_slider {
+    .slide_fixed_text {
       font-size: 1.6rem;
       line-height: 1.4;
       word-break: keep-all;
     }
   }
 
-  .section_current_events{
+  .section_current_events {
     padding: rem(80px) 0;
     margin-bottom: rem(100px);
-  
-    .btn_view_more{
+
+    .btn_view_more {
       left: 50%;
       top: calc(100% + 1rem);
       transform: translateX(-50%);
@@ -53,7 +53,7 @@
       font-size: rem(12px);
     }
 
-    .title_h2{
+    .title_h2 {
       padding-bottom: rem(20px);
     }
   }

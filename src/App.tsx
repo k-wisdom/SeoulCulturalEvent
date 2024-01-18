@@ -1,8 +1,9 @@
+import React from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './pages/Main';
 // import './App.css';
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import EventDetail from './pages/EventDetail';
 import NotFound from './pages/NotFound';
 import SearchList from './pages/SearchList';
@@ -15,20 +16,20 @@ import { GoTopBtn } from './components/buttons/GoTopBtn';
 function App() {
   const [eventList, state] = useData();
   return (
-    <dataContext.Provider value={{eventList,state}}>
-    <div className="App">
-      <ScrollToTop />
-      <Header/>
+    <dataContext.Provider value={{ eventList, state }}>
+      <div className="App">
+        <ScrollToTop />
+        <Header />
         <Routes>
-          <Route path="/" element={<Main/>}/>
-          <Route path="/eventList/:pageId" element={<EventList/>}/>
-          <Route path="/eventDetail" element={<EventDetail/>}/>
-          <Route path="/search" element={<SearchList/>}/>
-          <Route path="*" element={<NotFound/>}/>
+          <Route path="/" element={<Main />} />
+          <Route path="/eventList/:pageId" element={<EventList />} />
+          <Route path="/eventDetail" element={<EventDetail />} />
+          <Route path="/search" element={<SearchList />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      <Footer/>
-      <GoTopBtn />
-    </div>
+        <Footer />
+        <GoTopBtn />
+      </div>
     </dataContext.Provider>
   );
 }

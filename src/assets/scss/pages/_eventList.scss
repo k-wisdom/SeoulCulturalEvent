@@ -1,15 +1,15 @@
 @use '../abstracts' as *;
 
-.event_list_top{
+.event_list_top {
   margin: rem(50px) 0;
   border-bottom: 1px solid #000;
-  .title_h2{
+  .title_h2 {
     margin-bottom: rem(10px);
     font-size: rem(35px);
   }
 }
 
-.bx_search_form{
+.bx_search_form {
   display: flex;
   align-items: center;
   column-gap: rem(12px);
@@ -17,46 +17,45 @@
   padding: rem(20px) 0;
   margin-bottom: rem(20px);
 
-  .text_label{
+  .text_label {
     font-size: rem(14px);
     margin-right: rem(10px);
   }
 
-  .search_box{
+  .search_box {
     max-width: initial;
     width: rem(350px);
   }
 }
 
-.event_list_wrap{
+.event_list_wrap {
   margin: rem(50px) 0 rem(80px);
 }
 
-.event_list{
-    column-width: 13.75rem;
-    column-gap: 2.5rem;
+.event_list {
+  column-width: 13.75rem;
+  column-gap: 2.5rem;
 }
 
-.tab_btn_list{
+.tab_btn_list {
   margin-bottom: rem(20px);
-  button{
+  button {
     margin: rem(3px) rem(5px) rem(3px) 0;
     padding: 0 rem(15px);
   }
 }
 
-@include mobile{
-  
-  .event_list_top{
+@include mobile {
+  .event_list_top {
     margin: rem(30px) 0;
     border-bottom: 1px solid #000;
-    .title_h2{
+    .title_h2 {
       margin-bottom: rem(10px);
       font-size: 1.3rem;
     }
   }
 
-  .bx_search_form{
+  .bx_search_form {
     flex-wrap: wrap;
     align-items: center;
     column-gap: rem(12px);
@@ -64,20 +63,19 @@
     padding: rem(20px) 0;
     margin-bottom: 0;
 
-    .text_label{
+    .text_label {
       font-size: rem(12px);
       margin-right: rem(10px);
     }
 
-    .search_box{
+    .search_box {
       max-width: initial;
       width: rem(350px);
     }
   }
 
-
-  .event_list{
+  .event_list {
     column-width: rem(150px);
-    column-gap : rem(10px)
+    column-gap: rem(10px);
   }
 }

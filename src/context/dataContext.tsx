@@ -1,3 +1,3 @@
 import { createContext } from 'react';
 
-export const dataContext:any = createContext(null);
+export const dataContext: React.Context<any> = createContext(null);

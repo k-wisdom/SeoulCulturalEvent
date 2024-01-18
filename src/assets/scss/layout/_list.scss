@@ -1,7 +1,6 @@
 @use '../abstracts' as *;
 
-
-.article_item{
+.article_item {
   margin: rem(20px) auto;
   display: flex;
   align-items: flex-start;
@@ -9,28 +8,28 @@
   column-gap: rem(25px);
   cursor: pointer;
 
-  &:hover{
-  box-shadow: 2px 3px 21px -6px rgba(0,0,0,0.11);
-  -webkit-box-shadow: 2px 3px 21px -6px rgba(0,0,0,0.11);
-  -moz-box-shadow: 2px 3px 21px -6px rgba(0,0,0,0.11);
-    img{
+  &:hover {
+    box-shadow: 2px 3px 21px -6px rgba(0, 0, 0, 0.11);
+    -webkit-box-shadow: 2px 3px 21px -6px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 2px 3px 21px -6px rgba(0, 0, 0, 0.11);
+    img {
       transform: scale(1.15);
     }
   }
-  .img_wrap{
+  .img_wrap {
     overflow: hidden;
     display: block;
   }
-  img{
+  img {
     width: rem(200px);
     height: rem(250px);
     object-fit: cover;
-    transition: transform .6s;
+    transition: transform 0.6s;
   }
-  figcaption{
+  figcaption {
     flex: 1;
     padding: rem(10px) 0;
-    i{
+    i {
       display: block;
       margin-top: rem(10px);
       margin-bottom: rem(20px);
@@ -38,45 +37,44 @@
       color: #7e7e7e;
       font-size: rem(13px);
     }
-    h3{
+    h3 {
       margin-bottom: rem(20px);
       font-size: rem(17px);
       word-break: keep-all;
     }
-    p{
+    p {
       margin-bottom: rem(20px);
-      @include twoLineDotThree($h:2.6rem);
-      font-size:rem(14px);
+      @include twoLineDotThree($h: 2.6rem);
+      font-size: rem(14px);
       line-height: 1.4;
     }
-    span{
+    span {
       color: #7e7e7e;
       font-size: rem(13px);
     }
   }
 }
 
-
-.card_item{
+.card_item {
   display: inline-block;
   width: 100%;
   cursor: pointer;
-  &:hover{
-    figcaption{
+  &:hover {
+    figcaption {
       border-color: #000;
-      &:before{
+      &:before {
         background-color: #000;
       }
-      &:after{
+      &:after {
         color: #000;
       }
     }
   }
-  img{
+  img {
     width: 100%;
     height: auto;
   }
-  figcaption{
+  figcaption {
     position: relative;
     margin-top: rem(10px);
     margin-bottom: rem(40px);
@@ -84,14 +82,15 @@
     text-align: left;
     word-break: keep-all;
     border-left: 1px solid #d8dadc;
-    transition: all .3s;
+    transition: all 0.3s;
 
-    &:before,&:after{
+    &:before,
+    &:after {
       position: absolute;
-      transition: all .3s;
+      transition: all 0.3s;
     }
 
-    &:before{
+    &:before {
       content: '';
       left: 0;
       bottom: 0;
@@ -101,7 +100,7 @@
       background: #d8dadc;
     }
 
-    &:after{
+    &:after {
       content: 'READ MORE';
       left: rem(40px);
       bottom: 0;
@@ -113,18 +112,18 @@
       letter-spacing: 2px;
     }
 
-    i{
+    i {
       display: block;
       margin-bottom: rem(12px);
       font-size: rem(10px);
       color: #3d3d3d;
       font-style: normal;
     }
-    b{
+    b {
       display: block;
       font-size: rem(15px);
     }
-    span{
+    span {
       display: block;
       margin-top: rem(10px);
       font-size: rem(13px);
@@ -133,60 +132,57 @@
   }
 }
 
-
-@include mobile{
-
-  .article_item{
+@include mobile {
+  .article_item {
     margin: rem(20px) auto;
     column-gap: rem(12px);
 
-    img{
+    img {
       width: rem(150px);
       height: rem(220px);
     }
-    figcaption{
+    figcaption {
       flex: 1;
       padding: 0;
-      i{
+      i {
         margin-top: rem(10px);
         margin-bottom: rem(8px);
       }
-      h3{
+      h3 {
         margin-bottom: rem(10px);
         font-size: rem(14px);
       }
-      p{
+      p {
         margin-bottom: rem(10px);
-        @include twoLineDotThree($h:2.3rem);
-        font-size:rem(12px);
+        @include twoLineDotThree($h: 2.3rem);
+        font-size: rem(12px);
       }
     }
   }
 
-
-  .card_item{
-    figcaption{
+  .card_item {
+    figcaption {
       margin-top: rem(10px);
       margin-bottom: rem(40px);
       padding: rem(10px) rem(10px) rem(20px);
 
-      &:before{
+      &:before {
         width: rem(20px);
       }
 
-      &:after{
+      &:after {
         left: rem(30px);
         font-size: rem(10px);
         letter-spacing: 1;
       }
 
-      i{
+      i {
         margin-bottom: rem(8px);
       }
-      b{
+      b {
         font-size: rem(13px);
       }
-      span{
+      span {
         margin-top: rem(8px);
         font-size: rem(11px);
       }
