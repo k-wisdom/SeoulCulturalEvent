@@ -28,6 +28,15 @@
   .title_h2 {
     padding-bottom: rem(80px);
   }
+
+  .event_list{ 
+    display: flex;
+    flex-wrap: wrap;
+    column-width: auto; column-gap: rem(20px); 
+    .card_item{
+      width: calc((100% - 3.75rem) / 4 );
+    }
+  }
 }
 
 @include mobile {
@@ -55,6 +64,14 @@
 
     .title_h2 {
       padding-bottom: rem(20px);
+    }
+
+    .event_list{ 
+      flex-wrap: wrap;
+      column-width: auto; column-gap: rem(20px); 
+      .card_item{
+        width: calc((100% - 1.25rem) / 2 );
+      }
     }
   }
 }
