@@ -2,12 +2,9 @@ import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import '../../assets/scss/layout/_list.scss';
+import { EventDataType } from '../../types/types';
 
-interface Props {
-  readonly CODENAME: string;
-  readonly TITLE: string;
-  readonly DATE: string;
-  readonly MAIN_IMG: string;
+interface Props extends EventDataType{
   handleClick?: () => void;
 }
 

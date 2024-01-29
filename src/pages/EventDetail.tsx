@@ -2,15 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import '../assets/scss/pages/_eventDetail.scss';
 import RoundedBtn from '../components/buttons/RoudedBtn';
+import { EventDetailType } from '../types/types';
 
 export default function EventDetail() {
-  interface initData {
-    [index: string]: string;
-  }
-
   const navigate = useNavigate();
   const location = useLocation();
-  const [data, setData] = useState<initData | null>(null);
+  const [data, setData] = useState<EventDetailType | null>(null);
 
   useEffect(() => {
     if (location.state === null) {

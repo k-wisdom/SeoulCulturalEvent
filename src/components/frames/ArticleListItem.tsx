@@ -1,12 +1,9 @@
 import React from 'react';
 import '../../assets/scss/layout/_list.scss';
+import { EventDataType } from '../../types/types';
 
-interface Props {
-  readonly CODENAME: string;
-  readonly TITLE: string;
-  readonly DATE: string;
-  readonly MAIN_IMG: string;
-  readonly PROGRAM: string;
+interface Props extends EventDataType{
+  readonly PROGRAM?: string;
   handleClick?: () => void;
 }
 export default function ArticleListItem({
